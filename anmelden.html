@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Sportschützen Anmeldung</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+ <header>
+        <h1>Sportschützenverein Kleinlützel</h1><br>
+        <h2>Anmeldung Sportschützenverein</h2>
+        
+        <nav>
+            <ul>
+                <b><li><a href="lokal.html">Vereinslokal</a></li></b>
+                <li><a href="vorstand.html">Vorstand</a></li>
+                <li><a href="schuetzen.html">Schützen</a></li>
+                <li><a href="anmelden.html">Anmelden</a></li>
+                <!-- weitere Menüpunkte JahresProgram,Fotos etc -->
+            </ul>
+        </nav>
+    </header>
+
+<form action="https://gibm.becknet.ch/formular/formular.php" method="post">
+
+    <fieldset>
+        <legend>Persönliche Angaben</legend>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required minlength="2" maxlength="30"
+               placeholder="Max Mustermann" autofocus><br><br>
+
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required
+               placeholder="max@mail.ch"><br><br>
+
+        <label for="telefon">Telefon:</label><br>
+        <input type="tel" id="telefon" name="telefon"
+               pattern="[0-9+ ]{8,15}"
+               placeholder="+41 79 123 45 67"><br><br>
+
+        <label for="geburtstag">Geburtsdatum:</label><br>
+        <input type="date" id="geburtstag" name="geburtstag" required><br><br>
+
+        <label for="passwort">Passwort:</label><br>
+        <input type="password" id="passwort" name="passwort"
+               minlength="6" required><br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Schützen-Infos</legend>
+
+        <label for="erfahrung">Erfahrung (Jahre):</label><br>
+        <input type="number" id="erfahrung" name="erfahrung"
+               min="0" max="50" value="0"><br><br>
+
+        <label>Schützenstatus:</label><br>
+        <input type="radio" id="anfaenger" name="status" value="Anfänger" required>
+        <label for="anfaenger">Anfänger</label><br>
+
+        <input type="radio" id="fortgeschritten" name="status" value="Fortgeschritten">
+        <label for="fortgeschritten">Fortgeschritten</label><br><br>
+
+        <label for="disziplin">Disziplin:</label><br>
+        <select id="disziplin" name="disziplin" required>
+            <option value="">Bitte wählen</option>
+            <option value="Gewehr 300m">Gewehr 300m</option>
+            <option value="Pistole 25m">Pistole 25m</option>
+            <option value="Luftgewehr">Luftgewehr</option>
+        </select><br><br>
+
+        <label>Waffenarten (Mehrfachauswahl):</label><br>
+        <input type="checkbox" name="waffe[]" value="Gewehr"> Gewehr<br>
+        <input type="checkbox" name="waffe[]" value="Pistole"> Pistole<br>
+        <input type="checkbox" name="waffe[]" value="Revolver"> Revolver<br><br>
+    </fieldset>
+
+    <fieldset>
+        <legend>Weitere Angaben</legend>
+
+        <label for="website">Eigene Website:</label><br>
+        <input type="url" id="website" name="website"
+               placeholder="https://meineseite.ch"><br><br>
+
+        <label for="bemerkung">Bemerkungen:</label><br>
+        <textarea id="bemerkung" name="bemerkung"
+                  rows="4" cols="40"
+                  maxlength="200"
+                  placeholder="Motivation, Wünsche, Infos..."></textarea><br><br>
+
+        <label for="verein">Verein:</label><br>
+        <input type="text" id="verein" name="verein"
+               value="Sportschützen Musterstadt"
+               readonly><br><br>
+
+        <label for="intern">Interne Nummer:</label><br>
+        <input type="text" id="intern" value="AUTO123"
+               disabled><br><br>
+    </fieldset>
+
+    <input type="submit" value="Anmelden 🚀">
+
+</form>
+
+</body>
+</html>
