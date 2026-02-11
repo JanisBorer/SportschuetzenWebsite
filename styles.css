@@ -36,7 +36,24 @@ nav ul li a {
     color: white;
     text-decoration: none;
 }
+body {
+    padding-bottom: 150px;
+}
+input[type="submit"] {
+    margin-left: 10px;
+    font-size: 1.5rem;   
+    padding: 10px 20px; 
+    border-radius: 10px;
+    background-color: #eb0909;
+    color: white;            
+    border: none;           
+    cursor: pointer;         
+    transition: transform 0.2s; 
+}
 
+input[type="submit"]:hover {
+    transform: scale(1.05);
+}
 main {
     padding: 20px;
     text-align: center;
@@ -61,7 +78,6 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Neuer Stil für die spezifischen divs */
 .hidden {
     display: none;
 }
