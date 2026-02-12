@@ -1,40 +1,72 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <meta name="description" content="Offizielle Website der Sportschützen Kleinlützel.">
+    <meta name="description" content="Offizielle Website der Sportschützen Kleinlützel.">
     <meta name="author" content="Janis Borer">
-    <title>Sportschützen Kleinlützel Schützen</title>
+    <title>Sportschützen Kleinlützel – Schützen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
     <header>
-        <h1>Sportschützenverein Kleinlützel</h1><br>
-		<h2>Schützen</h2>
+        <h1>Sportschützenverein Kleinlützel</h1>
+        <h2>Schützen</h2>
+
         <nav>
             <ul>
                 <li><a href="lokal.html">Vereinslokal</a></li>
                 <li><a href="vorstand.html">Vorstand</a></li>
-                <b><li><a href="schuetzen.html">Schützen</a></li></b>
+                <li class="active"><a href="schuetzen.html">Schützen</a></li>
                 <li><a href="anmelden.html">Anmelden</a></li>
             </ul>
         </nav>
     </header>
+
     <main>
-       <table>
-            <tr><th>Schütze</th><th>Bild</th><th>Resultate</th>
-            <tr><td>Janis Borer</td><td><img src="images/Janis Borer.png" alt="Janis" width="40"></td><td><a href="resultat.html?div=1">Schiess Resultate</a></td>
-            <tr><td>Bernhard Laub</td><td><img src="images/Bernhard Laub.png" alt="Bernhard" width="40"></td><td><a href="resultat.html?div=2">Schiess Resultate</a></td>
-       </table>
+        <table>
+            <thead>
+                <tr>
+                    <th>Schütze</th>
+                    <th>Bild</th>
+                    <th>Resultate</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Janis Borer</b></td>
+                    <td>
+                        <img src="images/Janis Borer.png" alt="Portrait von Janis Borer" width="40">
+                    </td>
+                    <td>
+                        <a href="resultat.html?div=1">Schiessresultate</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Bernhard Laub</b></td>
+                    <td>
+                        <img src="images/Bernhard Laub.png" alt="Portrait von Bernhard Laub" width="40">
+                    </td>
+                    <td>
+                        <a href="resultat.html?div=2">Schiessresultate</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
     </main>
+
     <footer>
-       <p><small>Erstellt von Janis Borer</small></p>
+        <p><small>Erstellt von Janis Borer</small></p>
         <p>
-            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-            <a href="https://www.tiktok.com" target="_blank">TikTok</a> |
-			<a href="mailto:janis.borer09@gmail.com">Kontakt per E-Mail</a>
+            <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a> |
+            <a href="https://www.tiktok.com" target="_blank" rel="noopener noreferrer">TikTok</a> |
+            <a href="mailto:janis.borer09@gmail.com">Kontakt per E-Mail</a>
         </p>
     </footer>
+
 </body>
+
 </html>
