@@ -8,18 +8,19 @@ body {
     background-color: #f4f4f4;
 }
 
+.wappen{
+    max-width: 100%;
+}
+
 header {
     background-color: #333;
+    width: 100%;
     color: white;
     padding: 1rem;
     text-align: center;
-}
 
-header h1 {
-    margin: 0;
-}
-header h2 {
-    margin: 0;
+    h1 {margin: 5px;}
+    h2{margin: 5px;}
 }
 
 nav ul {
@@ -67,15 +68,15 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-}
 
-footer a {
-    color: #ff6f61;
+    a{
+ color: #ff6f61;
     text-decoration: none;
-}
+    }
 
-footer a:hover {
-    text-decoration: underline;
+    a:hover{
+text-decoration: underline;
+    }
 }
 
 .hidden {
@@ -85,11 +86,13 @@ footer a:hover {
 .table-container {
     width: 100%;
     border-collapse: collapse;
+    overflow-x: auto;
 }
 
 .table-container table {
     width: 100%;
     border-collapse: collapse;
+    min-width: 900px;
 }
 
 .table-container th,
@@ -97,4 +100,62 @@ footer a:hover {
     border: 1px solid black;
     padding: 10px;
     text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+fieldset {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    font-weight: bold;
+    padding: 0 10px;
+    color: #333;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+/* Styling für alle Texteingabefelder */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="password"],
+input[type="number"],
+input[type="url"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+footer svg {
+    margin: 10px 5px;
+    transition: fill 0.3s, transform 0.3s;
+}
+
+footer a:hover svg {
+    fill: #ff6f61;
+    transform: scale(1.1);
+    text-decoration: none;
 }

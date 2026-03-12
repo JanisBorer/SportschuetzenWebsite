@@ -47,11 +47,7 @@
         <label for="geburtstag">Geburtsdatum:</label><br>
         <input type="date" id="geburtstag" name="geburtstag" required><br><br>
 
-        <label for="passwort">Passwort:</label><br>
-        <input type="password" id="passwort" name="passwort"
-               minlength="6" required><br><br>
     </fieldset>
-
     <fieldset>
         <legend>Schützen-Infos</legend>
 
@@ -75,32 +71,19 @@
         </select><br><br>
 
         <label>Waffenarten (Mehrfachauswahl):</label><br>
-        <input type="checkbox" name="waffe[]" value="Gewehr"> Gewehr<br>
-        <input type="checkbox" name="waffe[]" value="Pistole"> Pistole<br>
-        <input type="checkbox" name="waffe[]" value="Revolver"> Revolver<br><br>
+        <input type="checkbox" name="waffe[]" value="Kleinkalieber"> Kleinkalieber<br>
+        <input type="checkbox" name="waffe[]" value="Luftgewehr"> Luftgewehr<br>
+        <input type="checkbox" name="waffe[]" value="Sturmgewehr"> Sturmgewehr<br><br>
      </fieldset>
 
     <fieldset>
         <legend>Weitere Angaben</legend>
-
-        <label for="website">Eigene Website:</label><br>
-        <input type="url" id="website" name="website"
-               placeholder="https://meineseite.ch"><br><br>
 
         <label for="bemerkung">Bemerkungen:</label><br>
         <textarea id="bemerkung" name="bemerkung"
                   rows="4" cols="40"
                   maxlength="200"
                   placeholder="Motivation, Wünsche, Infos..."></textarea><br><br>
-
-        <label for="verein">Verein:</label><br>
-        <input type="text" id="verein" name="verein"
-               value="Sportschützen Musterstadt"
-               readonly><br><br>
-
-        <label for="intern">Interne Nummer:</label><br>
-        <input type="text" id="intern" value="AUTO123"
-               disabled><br><br>
     </fieldset>
 <hr>
     <input type="submit" value="Anmelden">
