@@ -1,10 +1,17 @@
 /* style.css */
+:root {
+    --haupt-rot: #eb0909;
+    --hintergrund-grau: #e4e0e0;
+    --dunkel-grau: #333;
+    --schriftfarbe: white;
+}
 
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--hintergrund-grau);
+    padding-bottom: 150px; /* Zusammengefügt aus dem zweiten Body-Block */
 }
 
 .wappen {
@@ -14,7 +21,7 @@ body {
 header {
     background-color: #333;
     width: 100%;
-    color: white;
+    color: var(--schriftfarbe);
     padding: 1rem;
     text-align: center;
 
@@ -41,12 +48,8 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: var(--schriftfarbe);
     text-decoration: none;
-}
-
-body {
-    padding-bottom: 150px;
 }
 
 input[type="submit"] {
@@ -54,11 +57,11 @@ input[type="submit"] {
     font-size: 1.5rem;
     padding: 10px 20px;
     border-radius: 10px;
-    background-color: #eb0909;
-    color: white;
+    background-color: var(--haupt-rot);
+    color: var(--schriftfarbe);
     border: none;
     cursor: pointer;
-    transition: transform 0.2s;
+    transition: transform 0.2s ease-in-out;
 }
 
 input[type="submit"]:hover {
@@ -72,7 +75,7 @@ main {
 
 footer {
     background-color: #333;
-    color: white;
+    color: var(--schriftfarbe);
     text-align: center;
     padding: 10px;
     position: fixed;
@@ -80,8 +83,25 @@ footer {
     bottom: 0;
 
     a {
-        color: #ff6f61;
+        color: var(--haupt-rot);
         text-decoration: none;
+    }
+
+    svg {
+        margin: 10px 5px;
+        transition: fill 0.3s, transform 0.3s;
+    }
+
+    a:hover svg {
+        fill: var(--haupt-rot);
+        transform: scale(1.1);
+        text-decoration: none;
+    }
+}
+
+@media (max-height: 800px) {
+    footer {
+        position: static; 
     }
 }
 
@@ -153,19 +173,6 @@ textarea {
     border-radius: 4px;
     box-sizing: border-box;
 }
-
-
-footer svg {
-    margin: 10px 5px;
-    transition: fill 0.3s, transform 0.3s;
-}
-
-footer a:hover svg {
-    fill: #ff6f61;
-    transform: scale(1.1);
-    text-decoration: none;
-}
-
 
 @media (max-width: 325px) {
     h1 {
