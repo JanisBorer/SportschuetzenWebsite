@@ -11,7 +11,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--hintergrund-grau);
-    padding-bottom: 150px; /* Zusammengefügt aus dem zweiten Body-Block */
+    padding-bottom: 150px;
 }
 
 .wappen {
@@ -19,7 +19,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: var(--dunkel-grau);
     width: 100%;
     color: var(--schriftfarbe);
     padding: 1rem;
@@ -35,21 +35,35 @@ header {
     h2 {
         margin: 5px;
     }
+
+    nav {
+        ul {
+            list-style-type: none;
+            padding: 0;
+
+            li {
+                display: inline;
+                margin: 0 10px;
+
+                a {
+                    color: var(--schriftfarbe);
+                    text-decoration: none;
+                    transition: color 0.3s, transform 0.3s;
+                    display: inline-block; /* Notwendig für transform */
+
+                    &:hover {
+                        color: yellow;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
-nav ul li a {
-    color: var(--schriftfarbe);
-    text-decoration: none;
+main {
+    padding: 20px;
+    text-align: center;
 }
 
 input[type="submit"] {
@@ -62,46 +76,42 @@ input[type="submit"] {
     border: none;
     cursor: pointer;
     transition: transform 0.2s ease-in-out;
-}
 
-input[type="submit"]:hover {
-    transform: scale(1.05);
-}
-
-main {
-    padding: 20px;
-    text-align: center;
+    &:hover {
+        transform: scale(1.05);
+    }
 }
 
 footer {
-    background-color: #333;
+    background-color: var(--dunkel-grau);
     color: var(--schriftfarbe);
     text-align: center;
     padding: 10px;
     position: fixed;
     width: 100%;
     bottom: 0;
+    box-sizing: border-box;
+    z-index: 999;
 
     a {
         color: var(--haupt-rot);
         text-decoration: none;
-    }
 
-    svg {
-        margin: 10px 5px;
-        transition: fill 0.3s, transform 0.3s;
-    }
+        svg {
+            margin: 10px 5px;
+            transition: fill 0.3s, transform 0.3s;
+        }
 
-    a:hover svg {
-        fill: var(--haupt-rot);
-        transform: scale(1.1);
-        text-decoration: none;
+        &:hover svg {
+            fill: yellow;
+            transform: scale(1.1);
+        }
     }
 }
 
 @media (max-height: 800px) {
     footer {
-        position: static; 
+        position: static;
     }
 }
 
@@ -113,19 +123,23 @@ footer {
     width: 100%;
     border-collapse: collapse;
     overflow-x: auto;
-}
 
-.table-container table {
-    width: 100%;
-    border-collapse: collapse;
-    min-width: 900px;
-}
+    a:hover {
+        color: yellow;
+        transform: scale(1.1);
+    }
 
-.table-container th,
-.table-container td {
-    border: 1px solid black;
-    padding: 10px;
-    text-align: center;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 900px;
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    }
 }
 
 form {
@@ -135,43 +149,41 @@ form {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
-}
 
-fieldset {
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    padding: 15px;
-}
+    fieldset {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        padding: 15px;
 
-legend {
-    font-weight: bold;
-    padding: 0 10px;
-    color: #333;
-}
+        legend {
+            font-weight: bold;
+            padding: 0 10px;
+            color: var(--dunkel-grau);
+        }
+    }
 
-label {
-    font-weight: bold;
-    color: #555;
-}
+    label {
+        font-weight: bold;
+        color: #555;
+    }
 
-/* Styling für alle Texteingabefelder */
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="date"],
-input[type="password"],
-input[type="number"],
-input[type="url"],
-select,
-textarea {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="password"],
+    input[type="number"],
+    input[type="url"],
+    select,
+    textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
 }
 
 @media (max-width: 325px) {
@@ -191,19 +203,19 @@ textarea {
     max-width: 600px;
     margin: 20px auto;
     padding: 0 20px;
-}
 
-.karten-container p {
-    text-align: center;
-    margin-bottom: 15px;
-    color: #333;
-}
+    p {
+        text-align: center;
+        margin-bottom: 15px;
+        color: var(--dunkel-grau);
+    }
 
-.karten-container iframe {
-    width: 100%;
-    height: 400px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    iframe {
+        width: 100%;
+        height: 400px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .bild-schuetzen {
