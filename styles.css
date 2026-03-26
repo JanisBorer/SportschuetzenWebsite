@@ -19,6 +19,7 @@ body {
 }
 
 header {
+    box-sizing: border-box;
     background-color: var(--dunkel-grau);
     width: 100%;
     color: var(--schriftfarbe);
