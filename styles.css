@@ -109,7 +109,7 @@ footer {
     }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 600px) {
     footer {
         position: static;
     }
