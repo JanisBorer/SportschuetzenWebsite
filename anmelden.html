@@ -28,9 +28,9 @@
         <p> Unser Training ist <mark>Mittwoch um 18:00 Uhr</mark></p>
 
         <div class="anmeldung-container">
-            <a href="Resourcen/kurs2026.pdf" target="_blank" class="pdf-button">
-                Einladung J S Kurs 2026 herunterladen
-            </a>
+           <a href="pfad/zu/deiner/datei.pdf" target="_blank" download>
+   Einladung J S Kurs 2026 herunterladen (PDF, 150 KB)
+</a>
         </div>
 
         <form action="https://gibm.becknet.ch/formular/formular.php" method="post">
@@ -74,9 +74,16 @@
                 </select>
 
                 <label>Waffenarten (Mehrfachauswahl):</label><br>
-                <input type="checkbox" name="waffe[]" value="Kleinkalieber"> Kleinkaliber<br>
-                <input type="checkbox" name="waffe[]" value="Luftgewehr"> Luftgewehr<br>
-                <input type="checkbox" name="waffe[]" value="Sturmgewehr"> Sturmgewehr<br><br>
+
+<input type="checkbox" id="waffe_kk" name="waffe[]" value="Kleinkaliber"> 
+<label for="waffe_kk">Kleinkaliber</label><br>
+
+<input type="checkbox" id="waffe_lg" name="waffe[]" value="Luftgewehr"> 
+<label for="waffe_lg">Luftgewehr</label><br>
+
+<input type="checkbox" id="waffe_sg" name="waffe[]" value="Sturmgewehr"> 
+<label for="waffe_sg">Sturmgewehr</label><br>
+
             </fieldset>
             <fieldset>
                 <legend>Weitere Angaben</legend>
